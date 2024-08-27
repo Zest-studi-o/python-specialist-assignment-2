@@ -20,20 +20,19 @@ for line in data:
     # ... do something with value now
     #print("Cash in the pot:", kitty - int(values))
     print("Cash in the pot:", kitty)
-    
+    print("Loan amount requested:", int(values))
 
     if (int(values) <= kitty):
       kitty -= int(values)
-      print("Loan amount requested", int(values), "paid in full.\n" )
+      print("Loan amount granted!")
       
 
     elif (int(values) > kitty and kitty > 0):
-      print("Request of", int(values), "could not be made in full. "
-      "Partial payment of",kitty,"made.\n")
+      print("The exact loan request amount cannot be processed" 
+      "in full, however, we will give you what we can ", kitty)
       kitty = 0
 
     else:
-      print("No more money.\n"
-      "Outstanding request:", int(values),"\n")
+      print("No more money") 
     
   
